@@ -36,37 +36,19 @@ p {
   margin-top: 0;
   margin-bottom: 35px;
 }
+ body {
+  margin: 0;
+  color: #1f1b1b;
+  font-family: Georgia, "Times New Roman", serif;
 
-.section-one p,
-.section-three p {
-  margin-left: 55%;
-  margin-right: 5%;
+  background: linear-gradient(
+    to bottom,
+    #e8e5e1 0%,
+    #d0c5c5 35%,
+    #a78f91 65%,
+    #594345 100%
+  );
 }
-
-.section-two p,
-.section-four p {
-  margin-left: 7%;
-  margin-right: auto;
-}
-
-
-.section-one {
-  background-color: #e8e5e1;
-}
-
-.section-two {
-  background-color: #cfc5c5;
-}
-
-.section-three {
-  background-color: #a78f91;
-}
-
-.section-four {
-  background-color: #594345;
-  color: white;
-}
-
 
 /* IMAGES */
 
