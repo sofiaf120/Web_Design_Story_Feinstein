@@ -1,39 +1,83 @@
 body {
   margin: 0;
-  background-color: red;
+  background-color: #e1ddda;
   color: #1f1b1b;
   font-family: Georgia, "Times New Roman", serif;
 }
+
 
 /* TITLE */
 
 header {
   text-align: center;
-  padding: 100px 10%;
+  padding: 80px 10%;
 }
+
 h1 {
   font-size: 3rem;
   font-weight: normal;
   margin-bottom: 10px;
 }
+
 h2 {
   font-size: 1rem;
   font-weight: normal;
 }
 
 
+/* STORY SECTIONS */
+
 section {
-  width: 85%;
-  max-width: 900px;
-  margin: auto;
+  width: 100%;
+  min-height: 100vh;
   padding: 80px 0;
 }
+
+
+/* STORY TEXT */
+
 p {
+  width: 40%;
   max-width: 550px;
   line-height: 1.6;
   font-size: 1rem;
+  margin-bottom: 30px;
 }
 
+
+/* SECTION ONE - TEXT RIGHT */
+
+.section-one p {
+  margin-left: 55%;
+  margin-right: 5%;
+}
+
+
+/* SECTION TWO - TEXT LEFT */
+
+.section-two p {
+  margin-left: 8%;
+  margin-right: auto;
+}
+
+
+/* SECTION THREE - TEXT RIGHT */
+
+.section-three p {
+  margin-left: 55%;
+  margin-right: 5%;
+}
+
+
+/* SECTION FOUR - TEXT LEFT */
+
+.section-four p {
+  margin-left: 8%;
+  margin-right: auto;
+}
+
+
+/* BACKGROUND COLORS */
 
 .section-one {
   background-color: #e1ddda;
@@ -53,26 +97,31 @@ p {
 }
 
 
-/* IMAGES-uploads */
+/* IMAGES */
 
 img {
-  max-width: 100%;
+  width: 35%;
+  max-width: 450px;
   height: auto;
 }
 
 
-/* SMALL-media */
+/* SMALL SCREENS */
 
 @media (max-width: 700px) {
 
-  section {
-    width: 90%;
-  }
   h1 {
     font-size: 2.2rem;
   }
+
   p {
-    font-size: 0.95rem;
+    width: 85%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  img {
+    width: 60%;
   }
 
 }
