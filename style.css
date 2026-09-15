@@ -1,98 +1,69 @@
 body {
   margin: 0;
-  background-color: #e1ddda;
+  background-color: #e8e5e1;
   color: #1f1b1b;
   font-family: Georgia, "Times New Roman", serif;
 }
 
 
-/* TITLE */
-
 header {
   text-align: center;
-  padding: 80px 10%;
+  padding: 80px 5% 120px 5%;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: normal;
-  margin-bottom: 10px;
+  margin: 0 0 15px 0;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
-
-
-/* STORY SECTIONS */
 
 section {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 100px 0;
 }
-
-
-/* STORY TEXT */
 
 p {
   width: 40%;
-  max-width: 550px;
+  max-width: 700px;
+  font-size: 1.4rem;
   line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
-
-/* SECTION ONE - TEXT RIGHT */
-
-.section-one p {
-  margin-left: 55%;
-  margin-right: 5%;
-}
-
-
-/* SECTION TWO - TEXT LEFT */
-
-.section-two p {
-  margin-left: 8%;
-  margin-right: auto;
-}
-
-
-/* SECTION THREE - TEXT RIGHT */
-
+.section-one p,
 .section-three p {
   margin-left: 55%;
   margin-right: 5%;
 }
 
-
-/* SECTION FOUR - TEXT LEFT */
-
+.section-two p,
 .section-four p {
-  margin-left: 8%;
+  margin-left: 7%;
   margin-right: auto;
 }
 
 
-/* BACKGROUND COLORS */
-
 .section-one {
-  background-color: #e1ddda;
+  background-color: #e8e5e1;
 }
 
 .section-two {
-  background-color: #c9bfc0;
+  background-color: #cfc5c5;
 }
 
 .section-three {
-  background-color: #9d8587;
+  background-color: #a78f91;
 }
 
 .section-four {
-  background-color: #654b4d;
+  background-color: #594345;
   color: white;
 }
 
@@ -100,28 +71,46 @@ p {
 /* IMAGES */
 
 img {
-  width: 35%;
-  max-width: 450px;
+  width: 40%;
+  max-width: 650px;
   height: auto;
 }
 
 
-/* SMALL SCREENS */
+/* LEFT IMAGE */
+
+.image-left {
+  display: block;
+  margin-left: 7%;
+  margin-right: auto;
+}
+
+
+/* RIGHT IMAGE */
+
+.image-right {
+  display: block;
+  margin-left: auto;
+  margin-right: 7%;
+}
 
 @media (max-width: 700px) {
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 
   p {
     width: 85%;
+    font-size: 1.1rem;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
   img {
-    width: 60%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
