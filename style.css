@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
+
 html {
+  font-size: clamp(17px, 1.25vw, 32px);
   background-color: #f1ece5;
   background-image:
     url("images/background.jpg"),
@@ -16,12 +18,11 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 1800px;
-  padding: 0 clamp(20px, 4vw, 80px) 60px;
+  max-width: 76rem;
+  padding: 0 2.2rem 3.5rem;
   font-family: Georgia, "Times New Roman", serif;
-  /* grows with the window instead of staying 18px on a huge screen */
-  font-size: clamp(17px, 1.05vw, 23px);
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
   color: #2b2322;
 }
 
@@ -31,42 +32,40 @@ img {
 }
 
 
-/* ---------- header ---------- */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 24px;
-  padding-top: 40px;
+  gap: 1.5rem;
+  padding-top: 2.2rem;
 }
 
 h1 {
-  font-size: clamp(48px, 6.5vw, 110px);
+  font-size: 3.9rem;
   font-weight: normal;
   margin: 0;
   line-height: 1.05;
 }
 
 .author {
-  font-size: clamp(12px, 0.85vw, 16px);
-  letter-spacing: 3px;
-  margin-top: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.17em;
+  margin-top: 0.4rem;
 }
 
 .top-butterfly {
-  width: clamp(110px, 11vw, 210px);
+  width: 7rem;
   flex-shrink: 0;
 }
 
 
-/* ---------- two and three column rows ---------- */
 
 .row {
   display: flex;
   align-items: center;
-  gap: clamp(30px, 3.5vw, 70px);
-  margin: clamp(50px, 7vw, 120px) 0;
+  gap: 2.4rem;
+  margin: 4rem 0;
 }
 
 .side {
@@ -78,17 +77,13 @@ h1 {
 .text {
   flex: 2 1 0;
   min-width: 0;
-  /* stops lines getting too long to read on a wide screen */
-  max-width: 72ch;
-  margin-inline: auto;
 }
 
-/* width:100% is what lets these grow to fill the column */
 .side img {
   display: block;
   width: 100%;
-  max-width: 480px;
-  margin: 0 auto clamp(20px, 2vw, 36px);
+  max-width: 22rem;
+  margin: 0 auto 1.4rem;
 }
 
 .side img:last-child {
@@ -96,65 +91,62 @@ h1 {
 }
 
 
-/* ---------- headings ---------- */
 
 h2 {
   text-align: center;
-  font-size: clamp(30px, 3.6vw, 64px);
+  font-size: 2.3rem;
   font-weight: normal;
-  margin: clamp(60px, 7vw, 110px) 0 10px;
+  margin: 4.5rem 0 0.6rem;
 }
 
 h2::after {
   content: "";
   display: block;
-  width: 45px;
+  width: 2.5rem;
   height: 2px;
   background: currentColor;
-  margin: 15px auto;
+  margin: 0.8rem auto;
 }
 
 
-/* ---------- the five flowers ---------- */
 
 .flowers {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(24px, 2.5vw, 50px);
-  margin: clamp(40px, 5vw, 80px) 0;
+  gap: 1.7rem;
+  margin: 2.5rem 0;
 }
 
 .flower {
-  flex: 1 1 180px;
+  flex: 1 1 9rem;
   min-width: 0;
   text-align: center;
 }
 
 .flower img {
   width: 100%;
-  height: clamp(170px, 15vw, 270px);
+  height: 9.5rem;
   object-fit: contain;
-  margin-bottom: 14px;
+  margin-bottom: 0.7rem;
 }
 
 
-/* ---------- utilities ---------- */
 
 .center {
   text-align: center;
 }
 
 .small-img {
-  width: min(70%, 240px);
+  width: min(70%, 11rem);
   display: block;
-  margin: clamp(20px, 2vw, 36px) auto;
+  margin: 1.4rem auto;
 }
 
 .quote {
   border: 1px solid #8a7470;
   border-radius: 8px;
-  padding: clamp(16px, 1.6vw, 30px) clamp(20px, 2vw, 38px);
-  font-size: 1.1em;
+  padding: 1rem 1.4rem;
+  font-size: 1.1rem;
 }
 
 .light {
@@ -166,23 +158,17 @@ h2::after {
 }
 
 
-/* ---------- footer ---------- */
 
 footer {
   text-align: center;
-  padding: clamp(40px, 5vw, 90px) 0;
+  padding: 2.5rem 0;
 }
 
 footer img {
-  width: clamp(250px, 26vw, 460px);
+  width: 14rem;
   margin: 0 auto;
 }
 
-
-/* ---------- responsive ---------- */
-
-/* Columns get cramped well before phone width, so the text drops
-   below the pictures here rather than being squeezed thin. */
 @media (max-width: 950px) {
   .row {
     flex-direction: column;
@@ -191,15 +177,14 @@ footer img {
   .side,
   .text {
     width: 100%;
-    max-width: 100%;
   }
 
   .side img {
-    max-width: 380px;
+    max-width: 20rem;
   }
 
   .flower {
-    flex-basis: calc(33.333% - 24px);
+    flex-basis: calc(33.333% - 1.2rem);
   }
 }
 
@@ -216,10 +201,10 @@ footer img {
 
   .flower img {
     height: auto;
-    max-height: 240px;
+    max-height: 13rem;
   }
 
   .side img {
-    max-width: 300px;
+    max-width: 17rem;
   }
 }
