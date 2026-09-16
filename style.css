@@ -1,15 +1,21 @@
 body {
-  margin: 0;
+  margin: 0 auto;          /* centers the page */
+  max-width: 1300px;       /* stops it stretching on big screens */
   padding: 0 40px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 1.6;
   color: #2b2322;
+}
 
-  background-color: #f1ece5;                            /* shows while the image loads */
-  background-image: url("butterfly_assets/background.jpg");
-  background-size: 100% 100%;                           /* stretch to fill the whole page */
+html {
+  background-color: #f1ece5;
+  background-image:
+    url("butterfly_assets/background.jpg"),
+    linear-gradient(#f1ece5 0%, #ebe3da 35%, #c9a9a2 55%, #8a6664 68%, #3a2c2b 80%, #161111 100%);
+  background-size: 100% 100%;     /* stretch to fill the whole page */
   background-repeat: no-repeat;
+  min-height: 100%;
 }
 
 img {
@@ -57,12 +63,12 @@ nav a {
 }
 
 .side {
-  width: 25%;       
+  width: 25%;       /* image columns */
   text-align: center;
 }
 
 .text {
-  width: 50%;       
+  width: 50%;       /* story column */
 }
 
 
@@ -90,7 +96,7 @@ h2::after {
 }
 
 .flower {
-  width: 20%;       
+  width: 20%;       /* 5 flowers x 20% = 100% */
 }
 
 .flower img {
