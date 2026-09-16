@@ -7,7 +7,7 @@
 html {
   background-color: #f1ece5;
   background-image:
-    url("butterfly_assets/background.jpg"),
+    url("images/background.jpg"),
     linear-gradient(#f1ece5 0%, #ebe3da 35%, #c9a9a2 55%, #8a6664 68%, #3a2c2b 80%, #161111 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
