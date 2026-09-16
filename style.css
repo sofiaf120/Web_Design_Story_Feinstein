@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-
+/* Base size scales with screen width: ~17px on a laptop, ~30px on a large monitor */
 html {
-  font-size: clamp(17px, 1.25vw, 32px);
+  font-size: clamp(16px, 0.9vw + 6px, 34px);
   background-color: #f1ece5;
   background-image:
     url("images/background.jpg"),
@@ -16,10 +16,10 @@ html {
   min-height: 100vh;
 }
 
+/* No max-width: content now spans the full page with side padding */
 body {
-  margin: 0 auto;
-  max-width: 76rem;
-  padding: 0 2.2rem 3.5rem;
+  margin: 0;
+  padding: 0 5vw 4rem;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
   line-height: 1.7;
@@ -32,58 +32,60 @@ img {
 }
 
 
+/* ---------- Header ---------- */
 
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding-top: 2.2rem;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3vw;
 }
 
 h1 {
-  font-size: 3.9rem;
+  font-size: clamp(3rem, 7vw, 9rem);
   font-weight: normal;
   margin: 0;
   line-height: 1.05;
 }
 
 .author {
-  font-size: 0.72rem;
-  letter-spacing: 0.17em;
-  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  margin-top: 0.6rem;
 }
 
 .top-butterfly {
-  width: 7rem;
+  width: clamp(7rem, 14vw, 20rem);
   flex-shrink: 0;
 }
 
 
+/* ---------- Three-column rows ---------- */
 
 .row {
   display: flex;
   align-items: center;
-  gap: 2.4rem;
-  margin: 4rem 0;
+  gap: 5vw;
+  margin: 6vw 0;
 }
 
 .side {
-  flex: 1.2 1 0;
+  flex: 1 1 0;
   min-width: 0;
   text-align: center;
 }
 
 .text {
-  flex: 2 1 0;
+  flex: 1.5 1 0;
   min-width: 0;
+  font-size: 1.15rem;
 }
 
 .side img {
   display: block;
   width: 100%;
-  max-width: 22rem;
-  margin: 0 auto 1.4rem;
+  margin: 0 auto 2.5vw;
 }
 
 .side img:last-child {
@@ -91,62 +93,74 @@ h1 {
 }
 
 
+/* ---------- Section headings ---------- */
 
 h2 {
   text-align: center;
-  font-size: 2.3rem;
+  font-size: clamp(2.2rem, 4.5vw, 6rem);
   font-weight: normal;
-  margin: 4.5rem 0 0.6rem;
+  line-height: 1.2;
+  margin: 7vw 0 1rem;
 }
 
 h2::after {
   content: "";
   display: block;
-  width: 2.5rem;
+  width: 3.5rem;
   height: 2px;
   background: currentColor;
-  margin: 0.8rem auto;
+  margin: 1.2rem auto;
+}
+
+h2 + .center {
+  font-size: 1.25rem;
 }
 
 
+/* ---------- Flower grid ---------- */
 
 .flowers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.7rem;
-  margin: 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3vw;
+  margin: 4vw 0;
 }
 
 .flower {
-  flex: 1 1 9rem;
   min-width: 0;
   text-align: center;
+  font-size: 1.05rem;
 }
 
 .flower img {
   width: 100%;
-  height: 9.5rem;
+  height: clamp(9rem, 16vw, 26rem);
   object-fit: contain;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 
+/* ---------- Utilities ---------- */
 
 .center {
   text-align: center;
 }
 
 .small-img {
-  width: min(70%, 11rem);
+  width: 75%;
   display: block;
-  margin: 1.4rem auto;
+  margin: 2vw auto;
+}
+
+.text .small-img {
+  width: 55%;
 }
 
 .quote {
   border: 1px solid #8a7470;
   border-radius: 8px;
-  padding: 1rem 1.4rem;
-  font-size: 1.1rem;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.2rem;
 }
 
 .light {
@@ -158,53 +172,65 @@ h2::after {
 }
 
 
+/* ---------- Footer ---------- */
 
 footer {
   text-align: center;
-  padding: 2.5rem 0;
+  padding: 4vw 0;
 }
 
 footer img {
-  width: 14rem;
+  width: clamp(14rem, 30vw, 36rem);
   margin: 0 auto;
 }
+
+
+/* ---------- Tablet ---------- */
 
 @media (max-width: 950px) {
   .row {
     flex-direction: column;
+    gap: 2.5rem;
   }
 
   .side,
   .text {
+    flex: none;
     width: 100%;
   }
 
   .side img {
-    max-width: 20rem;
+    max-width: 28rem;
   }
 
-  .flower {
-    flex-basis: calc(33.333% - 1.2rem);
+  .flowers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flower img {
+    height: 12rem;
   }
 }
+
+
+/* ---------- Phone ---------- */
 
 @media (max-width: 700px) {
   header {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
-  .flower {
-    flex-basis: 100%;
+  .flowers {
+    grid-template-columns: 1fr;
   }
 
   .flower img {
     height: auto;
-    max-height: 13rem;
+    max-height: 15rem;
   }
 
   .side img {
-    max-width: 17rem;
+    max-width: 20rem;
   }
 }
