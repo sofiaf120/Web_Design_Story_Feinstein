@@ -83,12 +83,10 @@ h1 {
 .top-butterfly {
   width: clamp(7rem, 14vw, 20rem);
   flex-shrink: 0;
-  /* Start: right after the "y" in Butterfly */
   transform: translate(-45vw, 1rem) rotate(-15deg);
   transition: transform 2s ease-in-out;
 }
 
-/* End: far top right corner */
 .top-butterfly.home {
   transform: translate(4vw, -2vw) rotate(0deg);
 }
@@ -274,6 +272,16 @@ h2 + .center {
 }
 
 
+.pull-left {
+  margin-right: 18%;
+}
+
+.pull-right {
+  margin-left: 18%;
+  text-align: right;
+}
+
+
 
 footer {
   text-align: center;
@@ -319,6 +327,12 @@ footer img {
   .flower img {
     height: 12rem;
   }
+
+  .pull-left,
+  .pull-right {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 
@@ -328,8 +342,9 @@ footer img {
     flex-direction: column;
     text-align: center;
   }
-    .top-butterfly,
-    .top-butterfly.home {
+
+  .top-butterfly,
+  .top-butterfly.home {
     transform: none;
   }
 
