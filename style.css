@@ -373,4 +373,11 @@ footer img {
   .side img {
     max-width: 20rem;
   }
+  .butterfly-divider {
+    display: block;
+    width: 55%;
+    max-width: 650px;
+    height: auto;
+    margin: 5rem auto;
+  }
 }
