@@ -26,6 +26,20 @@ body {
   color: #2b2322;
 }
 
+h1,
+h2,
+.quote,
+p.center {
+  font-family: "Cormorant Upright", "Cormorant", Georgia, serif;
+  font-weight: 500;
+}
+
+.quote,
+p.center {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -129,7 +143,6 @@ h2 + .center {
 .flower {
   min-width: 0;
   text-align: center;
-  font-size: 1.05rem;
 }
 
 .flower img {
@@ -137,6 +150,12 @@ h2 + .center {
   height: clamp(9rem, 16vw, 26rem);
   object-fit: contain;
   margin-bottom: 2rem;
+}
+
+.flower p {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin-top: 0;
 }
 
 
@@ -204,7 +223,7 @@ footer img {
     font-size: 1.6rem;
   }
 
-  .flowers {
+  .flower p {
     font-size: 1.4rem;
   }
 
@@ -215,6 +234,7 @@ footer img {
   .flowers {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .flower img {
     height: 12rem;
   }
@@ -229,15 +249,15 @@ footer img {
     text-align: center;
   }
 
-  .text
+  .text,
   h2 + .center {
     font-size: 1.25rem;
   }
 
-  .flowers {
+  .flower p {
     font-size: 1.15rem;
   }
-  
+
   .flowers {
     grid-template-columns: 1fr;
   }
