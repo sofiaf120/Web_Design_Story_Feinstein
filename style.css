@@ -373,11 +373,19 @@ footer img {
   .side img {
     max-width: 20rem;
   }
+
+  .divider-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+  }
+
   .butterfly-divider {
-    display: block;
-    width: 80%;
-    max-width: 1400px;
+    width: 800px !important;
+    max-width: 80vw !important;
     height: auto;
-    margin: 5rem auto;
+    margin: 0 !important;
   }
 }
