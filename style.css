@@ -170,7 +170,8 @@ h2 + .center {
   line-height: 1.5;
   margin-top: 0;
 }
- .flowers {
+ 
+.flower-wrap {
   position: relative;
 }
 
@@ -179,8 +180,10 @@ h2 + .center {
   top: 0;
   left: 0;
   width: 5rem;
-  animation: flyAcross linear both;
-  animation-timeline: view();
+  z-index: 2;
+  pointer-events: none;
+  animation: flyAcross 1s linear paused both;
+  animation-delay: calc(var(--p, 0) * -1s);
 }
 
 @keyframes flyAcross {
@@ -190,7 +193,6 @@ h2 + .center {
   75%  { translate: 60vw -1rem;  rotate: -8deg; }
   100% { translate: 80vw 2rem;   rotate: 5deg; }
 }
-
 
 .center {
   text-align: center;

@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cormorant+Upright:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Butterfly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Cormorant+Upright:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  const butterfly = document.querySelector('.top-butterfly');
-
-  window.addEventListener('scroll', () => {
-    butterfly.classList.toggle('home', window.scrollY > 20);
-  });
-</script>
 <body>
 
   <header>
@@ -59,29 +52,32 @@
   <h2>A Search<br>Among the Flowers</h2>
   <p class="center">Then, as the young lads often do, he looked out for the elder girls.</p>
 
-  <section class="flowers">
+  <div class="flower-wrap">
     <img class="flying-butterfly" src="images/01_large_butterfly.png" alt="">
-    <div class="flower">
-      <img src="images/06_anemone.png" alt="" width="263" height="268">
-      <p>He next flew to the anemones; these were rather sour to his taste.</p>
-    </div>
-    <div class="flower">
-      <img src="images/07_violets.png" alt="" width="251" height="302">
-      <p>The violet, a little too sentimental.</p>
-    </div>
-    <div class="flower">
-      <img src="images/08_lime_blossoms.png" alt="" width="240" height="276">
-      <p>The lime-blossoms, too small, and besides, there was such a large family of them.</p>
-    </div>
-    <div class="flower">
-      <img src="images/09_apple_blossoms.png" alt="" width="278" height="269">
-      <p>The apple-blossoms, though they looked like roses, bloomed to-day, but might fall off to-morrow, with the first wind that blew.</p>
-    </div>
-    <div class="flower">
-      <img src="images/10_pea_blossom.png" alt="" width="302" height="284">
-      <p>The pea-blossom pleased him most of all; she was white and red, graceful and slender, and belonged to those domestic maidens who have a pretty appearance, and can yet be useful in the kitchen.</p>
-    </div>
-  </section>
+
+    <section class="flowers">
+      <div class="flower">
+        <img src="images/06_anemone.png" alt="" width="263" height="268">
+        <p>He next flew to the anemones; these were rather sour to his taste.</p>
+      </div>
+      <div class="flower">
+        <img src="images/07_violets.png" alt="" width="251" height="302">
+        <p>The violet, a little too sentimental.</p>
+      </div>
+      <div class="flower">
+        <img src="images/08_lime_blossoms.png" alt="" width="240" height="276">
+        <p>The lime-blossoms, too small, and besides, there was such a large family of them.</p>
+      </div>
+      <div class="flower">
+        <img src="images/09_apple_blossoms.png" alt="" width="278" height="269">
+        <p>The apple-blossoms, though they looked like roses, bloomed to-day, but might fall off to-morrow, with the first wind that blew.</p>
+      </div>
+      <div class="flower">
+        <img src="images/10_pea_blossom.png" alt="" width="302" height="284">
+        <p>The pea-blossom pleased him most of all; she was white and red, graceful and slender, and belonged to those domestic maidens who have a pretty appearance, and can yet be useful in the kitchen.</p>
+      </div>
+    </section>
+  </div>
 
 
   <section class="row">
@@ -163,6 +159,27 @@
   <footer>
     <img src="images/20_butterfly_divider.png" alt="" width="432" height="107">
   </footer>
+
+  <script>
+    // Top butterfly: flies to the corner when you scroll, back when you return to the top
+    const butterfly = document.querySelector('.top-butterfly');
+
+    // Flying butterfly: moves across the flowers as you scroll
+    const flyer = document.querySelector('.flying-butterfly');
+    const wrap = document.querySelector('.flower-wrap');
+
+    function onScroll() {
+      butterfly.classList.toggle('home', window.scrollY > 20);
+
+      const box = wrap.getBoundingClientRect();
+      let p = (window.innerHeight - box.top) / (window.innerHeight + box.height);
+      p = Math.min(Math.max(p, 0), 0.999);
+      flyer.style.setProperty('--p', p);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
 
 </body>
 </html>
