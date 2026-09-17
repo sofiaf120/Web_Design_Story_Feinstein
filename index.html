@@ -9,6 +9,13 @@
   <title>The Butterfly</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  const butterfly = document.querySelector('.top-butterfly');
+
+  window.addEventListener('scroll', () => {
+    butterfly.classList.toggle('home', window.scrollY > 20);
+  });
+</script>
 <body>
 
   <header>

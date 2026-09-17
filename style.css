@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* Base size scales with screen width: ~17px on a laptop, ~30px on a large monitor */
 html {
   font-size: clamp(16px, 0.9vw + 6px, 34px);
   background-color: #f1ece5;
@@ -16,7 +15,6 @@ html {
   min-height: 100vh;
 }
 
-/* No max-width: content now spans the full page with side padding */
 body {
   margin: 0;
   padding: 0 5vw 4rem;
@@ -46,7 +44,6 @@ img {
 }
 
 
-/* ---------- Header ---------- */
 
 header {
   display: flex;
@@ -84,11 +81,17 @@ h1 {
 .top-butterfly {
   width: clamp(7rem, 14vw, 20rem);
   flex-shrink: 0;
+
+  transform: translate(-40vw, 1rem) rotate(-15deg);
+  transition: transform 2s ease-in-out;
+}
+
+.top-butterfly.home {
+  transform: translate(0, 0) rotate(0deg);
 }
 
 
 
-/* ---------- Three-column rows ---------- */
 
 .row {
   display: flex;
@@ -120,7 +123,6 @@ h1 {
 }
 
 
-/* ---------- Section headings ---------- */
 
 h2 {
   text-align: center;
@@ -143,7 +145,6 @@ h2 + .center {
 }
 
 
-/* ---------- Flower grid ---------- */
 
 .flowers {
   display: grid;
@@ -171,7 +172,6 @@ h2 + .center {
 }
 
 
-/* ---------- Utilities ---------- */
 
 .center {
   text-align: center;
@@ -203,7 +203,6 @@ h2 + .center {
 }
 
 
-/* ---------- Footer ---------- */
 
 footer {
   text-align: center;
@@ -216,7 +215,6 @@ footer img {
 }
 
 
-/* ---------- Tablet ---------- */
 
 @media (max-width: 950px) {
   .row {
@@ -253,7 +251,6 @@ footer img {
 }
 
 
-/* ---------- Phone ---------- */
 
 @media (max-width: 700px) {
   header {
