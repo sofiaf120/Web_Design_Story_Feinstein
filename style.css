@@ -140,6 +140,36 @@ h2::after {
   margin: 1.2rem auto;
 }
 
+.time-title {
+  opacity: 0;
+  filter: blur(8px);
+  letter-spacing: 0.4em;
+  transition: opacity 2.5s ease, filter 2.5s ease, letter-spacing 2.5s ease;
+}
+
+.time-title.show {
+  opacity: 1;
+  filter: blur(0);
+  letter-spacing: normal;
+}
+
+/* Underline grows after the words appear */
+.time-title::after {
+  width: 0;
+  transition: width 2s ease 1s;
+}
+
+.time-title.show::after {
+  width: 3.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .time-title,
+  .time-title::after {
+    transition: none;
+  }
+}
+
 h2 + .center {
   font-size: 2.4rem;
 }
@@ -177,7 +207,7 @@ h2 + .center {
 
 .flying-butterfly {
   position: absolute;
-  top: 0;
+  top: 100%;   /* starts just below the flower captions */
   left: 0;
   width: 5rem;
   z-index: 2;
@@ -187,11 +217,11 @@ h2 + .center {
 }
 
 @keyframes flyAcross {
-  0%   { translate: 0 3rem;      rotate: 15deg; }
-  25%  { translate: 20vw -2rem;  rotate: -10deg; }
-  50%  { translate: 40vw 4rem;   rotate: 12deg; }
-  75%  { translate: 60vw -1rem;  rotate: -8deg; }
-  100% { translate: 80vw 2rem;   rotate: 5deg; }
+  0%   { translate: 0 2rem;     rotate: 15deg; }
+  25%  { translate: 20vw 0rem;  rotate: -10deg; }
+  50%  { translate: 40vw 3rem;  rotate: 12deg; }
+  75%  { translate: 60vw 1rem;  rotate: -8deg; }
+  100% { translate: 80vw 2.5rem; rotate: 5deg; }
 }
 
 .center {

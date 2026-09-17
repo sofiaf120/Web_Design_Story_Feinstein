@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h2 class="time-title">Time Passes</h2>
   <title>The Butterfly</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,10 +162,8 @@
   </footer>
 
   <script>
-    // Top butterfly: flies to the corner when you scroll, back when you return to the top
     const butterfly = document.querySelector('.top-butterfly');
 
-    // Flying butterfly: moves across the flowers as you scroll
     const flyer = document.querySelector('.flying-butterfly');
     const wrap = document.querySelector('.flower-wrap');
 
@@ -179,6 +178,15 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+    
+    const timeTitle = document.querySelector('.time-title');
+
+    new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        timeTitle.classList.toggle('show', entry.isIntersecting);
+      });
+    }, { threshold: 0.6 }).observe(timeTitle);
+
   </script>
 
 </body>
