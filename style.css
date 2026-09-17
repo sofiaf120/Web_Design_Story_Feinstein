@@ -170,7 +170,26 @@ h2 + .center {
   line-height: 1.5;
   margin-top: 0;
 }
+ .flowers {
+  position: relative;
+}
 
+.flying-butterfly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  animation: flyAcross linear both;
+  animation-timeline: view();
+}
+
+@keyframes flyAcross {
+  0%   { translate: 0 3rem;      rotate: 15deg; }
+  25%  { translate: 20vw -2rem;  rotate: -10deg; }
+  50%  { translate: 40vw 4rem;   rotate: 12deg; }
+  75%  { translate: 60vw -1rem;  rotate: -8deg; }
+  100% { translate: 80vw 2rem;   rotate: 5deg; }
+}
 
 
 .center {
