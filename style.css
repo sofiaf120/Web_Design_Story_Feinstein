@@ -375,8 +375,8 @@ footer img {
   }
   .butterfly-divider {
     display: block;
-    width: 55%;
-    max-width: 650px;
+    width: 80%;
+    max-width: 1400px;
     height: auto;
     margin: 5rem auto;
   }
