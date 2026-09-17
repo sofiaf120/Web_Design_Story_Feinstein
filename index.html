@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h2 class="time-title">Time Passes</h2>
   <title>The Butterfly</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +34,8 @@
       <p>He glanced, with a very critical eye, at all the flower-beds, and found that the flowers were seated quietly and demurely on their stalks, just as maidens should sit before they are engaged; but there was a great number of them, and it appeared as if his search would become very wearisome.</p>
 
       <p>The butterfly did not like to take too much trouble, so he flew off on a visit to the daisies. The French call this flower "Marguerite," and they say that the little daisy can prophesy.</p>
+
+      <p>Lovers pluck off the leaves, and as they pluck each leaf, they ask a question about their lovers; thus: "Does he or she love me? Ardently? Distractedly? Very much? A little? Not at all?" and so on. Every one speaks these words in his own language. The butterfly came also to Marguerite to inquire, but he did not pluck off her leaves; he pressed a kiss on each of them, for he thought there was always more to be done by kindness.</p>
 
       <p class="quote">"Darling Marguerite daisy," he said to her, "you are the wisest woman of all the flowers. Pray tell me which of the flowers I shall choose for my wife. Which will be my bride? When I know, I will fly directly to her, and propose."</p>
 
@@ -71,7 +72,7 @@
       </div>
       <div class="flower">
         <img src="images/09_apple_blossoms.png" alt="" width="278" height="269">
-        <p>The apple-blossoms, though they looked like roses, bloomed to-day, but might fall off to-morrow, with the first wind that blew.</p>
+        <p>The apple-blossoms, though they looked like roses, bloomed to-day, but might fall off to-morrow, with the first wind that blew; and he thought that a marriage with one of them might last too short a time.</p>
       </div>
       <div class="flower">
         <img src="images/10_pea_blossom.png" alt="" width="302" height="284">
@@ -84,28 +85,30 @@
   <section class="row">
 
     <div class="side">
-      <img src="images/11_honeysuckle.png" alt="" width="306" height="269">
-      <img class="small-img" src="images/03_falling_leaves.png" alt="" width="149" height="181">
+      <img src="images/12_pea_pod.png" alt="" width="350" height="230">
     </div>
 
     <div class="text">
-      <p>A honeysuckle hung forth from the hedge, in full bloom; but there were so many girls like her, with long faces and sallow complexions. No; he did not like her. But which one did he like?</p>
-
       <p>He was just about to make her an offer, when, close by the maiden, he saw a pod, with a withered flower hanging at the end.</p>
 
-      <p>"Who is that?" he asked.<br>
-        "That is my sister," replied the pea-blossom.<br>
-        "Oh, indeed; and you will be like her some day," said he; and he flew away directly, for he felt quite shocked.</p>
+      <p>"Who is that?" he asked.</p>
+
+      <p>"That is my sister," replied the pea-blossom.</p>
+
+      <p>"Oh, indeed; and you will be like her some day," said he; and he flew away directly, for he felt quite shocked.</p>
+
+      <p>A honeysuckle hung forth from the hedge, in full bloom; but there were so many girls like her, with long faces and sallow complexions. No; he did not like her. But which one did he like?</p>
     </div>
 
     <div class="side">
-      <img src="images/12_pea_pod.png" alt="" width="350" height="230">
+      <img src="images/11_honeysuckle.png" alt="" width="306" height="269">
+      <img class="small-img" src="images/03_falling_leaves.png" alt="" width="149" height="181">
     </div>
 
   </section>
 
 
-  <h2>Time Passes</h2>
+  <h2 class="time-title">Time Passes</h2>
 
   <section class="row">
 
@@ -120,7 +123,8 @@
 
       <p>For the heart asks for fragrance, even when it is no longer young; and there is very little of that to be found in the dahlias or the dry chrysanthemums; therefore the butterfly turned to the mint on the ground. You know, this plant has no blossom; but it is sweetness all over, full of fragrance from head to foot, with the scent of a flower in every leaf.</p>
 
-      <p class="quote">"I will take her," said the butterfly; and he made her an offer. But the mint stood silent and stiff, as she listened to him. At last she said, "Friendship, if you please; nothing more. I am old, and you are old, but we may live for each other just the same; as to marrying, no; don't let us appear ridiculous at our age."</p>
+      <p class="quote">"I will take her," said the butterfly; and he made her an offer. But the mint stood silent and stiff, as she listened to him. At last she said,<br>
+        "Friendship, if you please; nothing more. I am old, and you are old, but we may live for each other just the same; as to marrying, no; don't let us appear ridiculous at our age."</p>
 
       <p>And so it happened that the butterfly got no wife at all. He had been too long choosing, which is always a bad plan. And the butterfly became what is called an old bachelor.</p>
     </div>
@@ -144,7 +148,9 @@
 
       <p>"Now I am perched on a stalk, like the flowers," said the butterfly. "It is not very pleasant, certainly; I should imagine it is something like being married; for here I am stuck fast." And with this thought he consoled himself a little.</p>
 
-      <p>"That seems very poor consolation," said one of the plants in the room, that grew in a pot. "Ah," thought the butterfly, "one can't very well trust these plants in pots; they have too much to do with mankind."</p>
+      <p>"That seems very poor consolation," said one of the plants in the room, that grew in a pot.</p>
+
+      <p>"Ah," thought the butterfly, "one can't very well trust these plants in pots; they have too much to do with mankind."</p>
     </div>
 
     <div class="side">
@@ -178,7 +184,7 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    
+
     const timeTitle = document.querySelector('.time-title');
 
     new IntersectionObserver(entries => {
@@ -186,7 +192,6 @@
         timeTitle.classList.toggle('show', entry.isIntersecting);
       });
     }, { threshold: 0.6 }).observe(timeTitle);
-
   </script>
 
 </body>
