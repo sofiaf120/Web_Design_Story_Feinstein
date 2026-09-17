@@ -59,14 +59,14 @@ header {
 header img,
 main img,
 footer img {
-  opacity: 0.3 !important;
+  opacity: 0.6 !important;
   filter: sepia(0.7) saturate(0.4) contrast(0.75) brightness(1.1) blur(0.4px);
   mix-blend-mode: multiply;
 }
 
 .light img {
   mix-blend-mode: normal;
-  opacity: 0.3 !important;
+  opacity: 0.6 !important;
 }
 
 h1 {
