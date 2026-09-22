@@ -388,4 +388,31 @@ footer img {
     height: auto;
     margin: 0 !important;
   }
+
+  .next-story {
+  text-align: center;
+  padding: 6rem 5vw;
+}
+
+.next-intro {
+  margin-bottom: 3rem;
+}
+
+.story-choices {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.story-choices a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+}
+
+.story-choices a:hover {
+  font-style: italic;
+}
+
 }
