@@ -388,6 +388,7 @@ footer img {
     height: auto;
     margin: 0 !important;
   }
+}
 
 .next-story {
   text-align: center;
@@ -396,31 +397,34 @@ footer img {
 }
 .next-story h2 {
   color: #f3e7d3;
+  text-align: center;
 }
 
 .next-intro {
   color: #f3e7d3;
+  text-align: center;
+  font-size: 1.6rem;
   margin-bottom: 3rem;
 }
 
 .story-choices {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  flex direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
 }
 
-.story-choices a {
+.story-choices a,
+.story-choices a:link,
+.story-choices a:visited,
+.story-choices a:active {
+  display: block;
   color: #f3e7d3;
   text-decoration: none;
-  padding: 1rem;
-}
-
-.story-choices a:visited {
-  color: #f3e7d3;
-}
-
-.story-choices a:hover {
-  text-decoration: underline;
-}
+  text-align: center;
+  font-family: "Cormorant Upright", "Cormorant", Georgia, serif;
+  font-size: 2.8rem;
+  line-height: 1.25;
 
 }
