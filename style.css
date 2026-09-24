@@ -379,7 +379,7 @@ footer img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5rem 0;
+    margin: 2rem 0;
   }
 
   .butterfly-divider {
@@ -430,9 +430,10 @@ footer img {
   text-decoration: none;
   text-align: center;
   font-family: "Cormorant Upright", "Cormorant", Georgia, serif;
-  font-size: 2.8rem;
-  line-height: 1.25;
+  font-size: 1.8rem;
+  line-height: 1.35;
 }
+
 .story-choices a:hover {
   color: white;
   text-decoration: none;
@@ -440,23 +441,55 @@ footer img {
 
 .site-footer {
   text-align: center;
-  padding: 4rem 2rem 2rem;
-  color: #b9a99b;
-  font-size: 0.75rem;
-  line-height: 1.5;
+  padding: 3rem 2rem 4rem;
+  color: #f3e7d3;
+  font-family: "Baskervville", Baskerville, Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .site-footer p {
-  margin: 0.2rem 0;
+  color: #f3e7d3;
+  margin: 0.4rem 0;
 }
 
 .site-footer a,
 .site-footer a:link,
-.site-footer a:visited {
-  color: #b9a99b;
+.site-footer a:visited,
+.site-footer a:active {
+  color: #f3e7d3;
   text-decoration: underline;
 }
 
 .site-footer a:hover {
-  color: #f3e7d3;
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+
+  .next-story {
+    padding: 4rem 1rem;
+  }
+
+  .next-intro {
+    font-size: 1.1rem;
+  }
+
+  .story-choices {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 28rem;
+  }
+
+  .story-choices a,
+  .story-choices a:link,
+  .story-choices a:visited,
+  .story-choices a:active {
+    font-size: 1.4rem;
+  }
+
+  .site-footer {
+    font-size: 1rem;
+    padding: 3rem 1rem;
+  }
 }
